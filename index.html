@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Pump Foam – Simplehuman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .brushed-metal {
+            background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 50%, #e2e8f0 100%);
+            background-size: 200% 200%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .fade-in { animation: fadeIn 0.6s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .slide-in { animation: slideIn 0.8s ease-out; }
+        @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .feature-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .sticky-nav { transition: all 0.3s ease; }
+        .sticky-nav.scrolled { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="text-2xl font-bold">
+                        <span class="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">simplehuman</span>
+                    </a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Products</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Collections</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Support</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="p-2 text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="p-2 text-gray-600 hover:text-gray-900 relative">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Sensor Pump Foam</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-4">Touch-free foaming soap pump engineered for effortless hygiene</p>
+                    <div class="mb-8">
+                        <p class="text-3xl font-bold text-red-600">Rp289.000</p>
+                        <p class="text-lg text-gray-500 line-through">Rp429.000</p>
+                        <div class="mt-3 text-sm text-gray-500">
+                            <span id="urgency-timer" class="font-mono text-gray-700">23:59:59</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="brushed-metal rounded-3xl p-8 shadow-2xl">
+                        <img src="https://www.simplehuman.com/cdn/shop/files/ECOM_FOAM_PUMP_SINGLE_FRONT_BRUSHED_6c9bdafe-2b4e-4fc7-9f1d-f05a66ee722f_1200x1200.png" 
+                             alt="Sensor Pump Foam Brushed" 
+                             class="w-full h-auto hover-scale">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Selector -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center gap-4">
+                <div class="bg-gray-900 rounded-full w-10 h-10 cursor-pointer hover:scale-110 transition-transform"></div>
+                <div class="brushed-metal rounded-full w-10 h-10 cursor-pointer hover:scale-110 transition-transform"></div>
+                <div class="bg-gray-100 border border-gray-300 rounded-full w-10 h-10 cursor-pointer hover:scale-110 transition-transform"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="text-2xl mb-2">🫧</div>
+                    <h3 class="font-medium text-sm">Busa Lembut Instan</h3>
+                </div>
+                <div class="fade-in">
+                    <div class="text-2xl mb-2">✋</div>
+                    <h3 class="font-medium text-sm">Sensor Cerdas Tanpa Sentuh</h3>
+                </div>
+                <div class="fade-in">
+                    <div class="text-2xl mb-2">🔋</div>
+                    <h3 class="font-medium text-sm">Baterai 4 Bulan</h3>
+                </div>
+                <div class="fade-in">
+                    <div class="text-2xl mb-2">💧</div>
+                    <h3 class="font-medium text-sm">Tahan Air</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <img src="https://www.simplehuman.com/cdn/shop/files/Sensor-Pump-Foam-PDP-Brushed-1_e13dc7d8-8081-47f5-bfa2-1002ed55b9d1_1200x1200.png?v=1749335552" 
+                         alt="Main View" 
+                         class="w-full rounded-2xl shadow-lg hover-scale">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://www.simplehuman.com/cdn/shop/files/ECOM_FOAM_PUMP_SINGLE_ANGLED_BRUSHED_ba361a69-7c8f-4024-8fc9-03c32a56ab5f_1200x1200.png?v=1749335552" 
+                         alt="Side View" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://www.simplehuman.com/cdn/shop/files/ECOM_FOAM_PUMP_SINGLE_SIDE_BRUSHED_25240b17-1484-455a-8d03-c49d7eea67a8_1200x1200.png?v=1749335552" 
+                         alt="Side View 2" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://www.simplehuman.com/cdn/shop/files/ECOM_FOAM_PUMP_SINGLE_BACK_BRUSHED_5bbc0e39-b3b8-4a32-8ccc-49a8bcdf0cb4_1200x1200.png?v=1749335552" 
+                         alt="Back View" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://www.simplehuman.com/cdn/shop/files/ECOM_FOAM_PUMP_SINGLE_DETAIL_BRUSHED_076b90a7-9607-4970-9ddb-9b29bda79ca0_1200x1200.png?v=1749335552" 
+                         alt="Detail View" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://down-sg.img.susercontent.com/file/sg-11134207-7rcdw-lqydqscnew4q65.webp" 
+                         alt="Shopee View 1" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://down-sg.img.susercontent.com/file/sg-11134207-7rcdb-lqy9y9d03nzvf1.webp" 
+                         alt="Shopee View 2" 
+                         class="w-full rounded-lg shadow hover-scale">
+                    <img src="https://down-sg.img.susercontent.com/file/sg-11134207-7rcee-lqydqscndhka9d.webp" 
+                         alt="Shopee View 3" 
+                         class="w-full rounded-lg shadow hover-scale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Specifications</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Technical Details</h3>
+                    <dl class="space-y-3">
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Coating</dt>
+                            <dd class="font-medium">Brushed</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Power Source</dt>
+                            <dd class="font-medium">Built-In Lithium-Ion Battery</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Battery Life</dt>
+                            <dd class="font-medium">4 Months on 1 Charge</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">Warranty</dt>
+                            <dd class="font-medium">2 Year</dd>
+                        </div>
+                        <div class="flex justify-between">
+                            <dt class="text-gray-600">SKU</dt>
+                            <dd class="font-medium">ST1093</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Dimensions</h3>
+                    <img src="https://cdn.shopify.com/s/files/1/2804/6630/files/foam_dimensions_test_2.png?v=1749517691" 
+                         alt="Dimensions" 
+                         class="w-full rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OrderOnline Embed Code - v8.0.4 -->
+    <div class="ooef">
+        <form class="orderonline-embed-form" data-username="mila" data-product-slug="sensor-pump-foam" data-product-id="688a02f535fdb102e10495f8" id="oo-embed-form-sensor-pump-foam-6547" data-origin="orderonline">
+            <div class="ooef-loader">
+                <style>
+                    .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                    @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                    @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                    .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                    .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                    .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                    @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                    @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                </style>
+                <div aria-live="polite" role="status"><div>Loading...</div></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        if (typeof xLogError != 'function') { 
+            var xLogError = function (error) { 
+                var req = new XMLHttpRequest(); 
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); 
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; 
+                req.open('POST', 'https://api.orderonline.id/log', true); 
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
+                req.send(params); 
+            }; 
+        }
+        try {
+            if (typeof xEmbedScript != 'function') { 
+                var xEmbedScript = function () { 
+                    !function(w, d, e, v, id, t, s) { 
+                        if (d.getElementById(id)) return; 
+                        t = d.createElement(e); t.async = !0; t.src = v; t.id = id; 
+                        s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); 
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); 
+                }; 
+            }
+            if (typeof xEmbedInit != 'function') { 
+                var xEmbedInit = function (w, n) { 
+                    if (w.ooe) return; 
+                    n = w.ooe = function() { 
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) 
+                    }; 
+                    if (!w._ooe) w._ooe = n; 
+                    n.push = n; n.loaded = !0; n.version = '8.0.4'; n.queue = []; 
+                }; 
+            }
+            xEmbedInit(window); 
+            ooe('setup', 'redirect', 'https://mila.orderonline.id'); 
+            ooe('init', '5f1a7b8fa9bf807da24d83bb', '688a02f535fdb102e10495f8', '688a02f535fdb102e10495f9', 'oo-embed-form-sensor-pump-foam-6547', {
+                "mode":"page",
+                "action":"Klik untuk pemesanan",
+                "title":"Form Pemesanan",
+                "triggerPixel":true,
+                "triggerGtm":true
+            }); 
+            if (!window.jQuery) { 
+                !function(w, d, e, v, id, t, s) { 
+                    if (d.getElementById(id)) return; 
+                    t = d.createElement(e); t.async = !0; t.src = v; t.id = id; 
+                    t.addEventListener('load', xEmbedScript); 
+                    s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); 
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); 
+            } else { 
+                xEmbedScript(); 
+            }
+        } catch (e) { 
+            xLogError(e); 
+            throw e; 
+        }
+    </script>
+    <!-- End OrderOnline Embed Code -->
+
+</body>
+</html>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Urgency Timer
+        function updateTimer() {
+            const now = new Date();
+            const endOfDay = new Date(now);
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const timeLeft = endOfDay - now;
+            
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            const timer = document.getElementById('urgency-timer');
+            if (timer) {
+                timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+        }
+
+        // Update timer every second
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
